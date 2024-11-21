@@ -110,7 +110,7 @@ public class AddFragment extends Fragment {
         ppc_edt.setText("0");
 
         save_btn.setOnClickListener(view -> {
-            dayOfWeek = String.join(", ", selectedDaysList); // Lấy danh sách ngày đã chọn
+            dayOfWeek = dow_selector.getText().toString(); // Lấy danh sách ngày đã chọn
             capacity = Integer.parseInt(capacity_edt.getText().toString().trim());
             duration = Integer.parseInt(duration_edt.getText().toString().trim());
             pricePerClass = Float.parseFloat(ppc_edt.getText().toString().trim());

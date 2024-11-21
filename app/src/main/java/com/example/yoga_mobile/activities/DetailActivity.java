@@ -55,6 +55,7 @@ public class DetailActivity extends AppCompatActivity {
             capacity_d_content.setText(capacity+"");
             duration_d_content.setText(duration+"");
             ppc_d_content.setText(pricePerClass+"");
+            dow_d_content.setText(dayOfWeek);
             des_content.setText(description);
             if (typeOfClass.matches("Flow Yoga")) {
                 typeoc_d_content.setText("Flow Yoga");
@@ -63,21 +64,7 @@ public class DetailActivity extends AppCompatActivity {
             } else if (typeOfClass.matches("Family Yoga")) {
                 typeoc_d_content.setText("Family Yoga");
             }
-            if (dayOfWeek.matches("Monday")) {
-                dow_d_content.setText("Monday");
-            } else if (dayOfWeek.matches("Tuesday")) {
-                dow_d_content.setText("Tuesday");
-            } else if (dayOfWeek.matches("Wednesday")) {
-                dow_d_content.setText("Wednesday");
-            } else if (dayOfWeek.matches("Thursday")) {
-                dow_d_content.setText("Thursday");
-            } else if (dayOfWeek.matches("Friday")) {
-                dow_d_content.setText("Friday");
-            } else if (dayOfWeek.matches("Saturday")) {
-                dow_d_content.setText("Saturday");
-            } else if (dayOfWeek.matches("Sunday")) {
-                dow_d_content.setText("Sunday");
-            }
+
 
 
         }else {
