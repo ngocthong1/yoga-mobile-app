@@ -41,7 +41,6 @@ public class ClassActivity extends AppCompatActivity {
         myDB = new MyDatabaseHelper(this);
         classes = new ArrayList<>();
 
-
         storeDataInArrays();
         getAndSetIntentData();
         ArrayList<Class> classList = new ArrayList<>();

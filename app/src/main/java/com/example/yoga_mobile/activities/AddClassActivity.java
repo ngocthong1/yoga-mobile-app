@@ -49,7 +49,7 @@ public class AddClassActivity extends AppCompatActivity {
 
         myDB = new MyDatabaseHelper(this);
         getAndSetIntentData();
-        myDB.readAllDataClass();
+
         date_control.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -90,7 +90,7 @@ public class AddClassActivity extends AppCompatActivity {
                 } else {
                     String classId = classRef.push().getKey();
                     myDB.addClass(new Class(classId, teacher, date, comment, course_id));
-                    Intent intent = new Intent(AddClassActivity.this, ClassActivity.class);
+                    Intent intent = new Intent(AddClassActivity.this, MainActivity.class);
                     startActivity(intent);
                 }
             }
