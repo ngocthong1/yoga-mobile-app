@@ -61,15 +61,16 @@
             android:textSize="14sp"
             android:textStyle="bold" />
 
-        <Spinner
-            android:id="@+id/dow_spinner_up"
+        <TextView
+            android:id="@+id/dow_selector_up"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_weight="1"
             android:background="@drawable/edt_bg"
-            android:entries="@array/workStatus"
-            android:padding="5dp"
-            android:textAlignment="center" />
+            android:padding="10dp"
+            android:gravity="center_vertical"
+            android:text="Click to select days"
+            android:textColor="#000000"
+            android:textSize="16sp" />
     </LinearLayout>
 
     <LinearLayout

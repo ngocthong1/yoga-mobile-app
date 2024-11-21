@@ -118,7 +118,7 @@ public class AddFragment extends Fragment {
             timeOfCourse = timeRangeEditText.getText().toString().trim();
 
             if (duration == 0 || pricePerClass == 0 || timeOfCourse.equals("Click here to select time of course")
-                    || capacity == 0 || dayOfWeek.isEmpty() || rg.getCheckedRadioButtonId() == -1) {
+                    || capacity == 0 || dayOfWeek.equals("Click to select days") || rg.getCheckedRadioButtonId() == -1) {
                 displayFillAll();
             } else {
                 int id_btn = rg.getCheckedRadioButtonId();

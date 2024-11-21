@@ -106,34 +106,6 @@ public class HomeFragment extends Fragment {
     }
 
     // Fetch data from Firebase
-    private void getCoursesFromFirebase() {
-        coursesRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                courses.clear(); // Xóa danh sách cũ trước khi thêm mới
-
-                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                    try {
-                        // Lấy dữ liệu từ snapshot và chuyển đổi thành đối tượng Course
-                        Course course = snapshot.getValue(Course.class);
-                        if (course != null) {
-                            courses.add(course); // Thêm vào danh sách courses
-                        }
-                    } catch (Exception e) {
-                        Log.e("FirebaseError", "Error converting data: " + e.getMessage());
-                    }
-                }
-
-                // Cập nhật RecyclerView sau khi dữ liệu được tải
-                courseAdapter.notifyDataSetChanged();
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-                Toast.makeText(getActivity(), "Failed to load courses from Firebase", Toast.LENGTH_SHORT).show();
-            }
-        });
-    }
 
     void confirmDialogForAll() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
